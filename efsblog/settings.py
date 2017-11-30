@@ -33,13 +33,13 @@ DEBUG = False
 
 if DEBUG:
     EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = 'vbhat0811@gmail.com  '
-    EMAIL_HOST_PASSWORD = 'zsdnamwvdteodwnq'
+    EMAIL_HOST_USER = 'relaprolu@unomaha.edu'
+    EMAIL_HOST_PASSWORD = 'test@123'
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
-    DEFAULT_FROM_EMAIL = 'vbhat0811@gmail.com'
+    DEFAULT_FROM_EMAIL = 'relaprolu@unomaha.edu'
 
-ALLOWED_HOSTS = ['127.0.0.1']
+#ALLOWED_HOSTS = ['127.0.0.1']
 
 try:
     from .local_settings import *
