@@ -31,6 +31,16 @@ ALLOWED_HOSTS = ['*']
 
 DEBUG = False
 
+if DEBUG:
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'vbhat0811@gmail.com  '
+    EMAIL_HOST_PASSWORD = 'zsdnamwvdteodwnq'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_FROM_EMAIL = 'vbhat0811@gmail.com'
+
+ALLOWED_HOSTS = ['127.0.0.1']
+
 try:
     from .local_settings import *
 except ImportError:
@@ -67,7 +77,7 @@ ROOT_URLCONF = 'efsblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['portfolio/templates/registration',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,6 +91,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'efsblog.wsgi.application'
+
 
 
 # Database
@@ -153,8 +164,13 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+
 

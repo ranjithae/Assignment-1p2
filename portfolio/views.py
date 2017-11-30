@@ -12,6 +12,8 @@ from django.db.models import Sum
 
 
 
+
+
 def home(request):
    return render(request, 'portfolio/home.html',
                  {'portfolio': home})
