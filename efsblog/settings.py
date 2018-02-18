@@ -29,15 +29,15 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['*']
 
-DEBUG = False
+DEBUG = True
 
 if DEBUG:
     EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = 'relaprolu@unomaha.edu'
-    EMAIL_HOST_PASSWORD = 'test@123'
+    EMAIL_HOST_USER = 'ranji51592@gmail.com'
+    EMAIL_HOST_PASSWORD = 'Harira.215'
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
-    DEFAULT_FROM_EMAIL = 'relaprolu@unomaha.edu'
+    DEFAULT_FROM_EMAIL = 'ranji51592@gmail.com'
 
 #ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'mathfilters',
     'django.contrib.humanize',
     'portfolio',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -100,10 +101,10 @@ WSGI_APPLICATION = 'efsblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dalnook0qfol41',
-        'USER': 'dwixigwprsbdec',
-        'PASSWORD': '8ad9cd4d38acb4b1210db33349c5b2be817ba5e031b73117a239aa7cbdc92789',
-        'HOST': 'ec2-50-19-218-160.compute-1.amazonaws.com',
+        'NAME': 'ddfih9nodrtbdv',
+        'USER': 'lhlqhqhsldjcsh',
+        'PASSWORD': 'f37e62ba0150a2ded21b990078eeca73dce64ed4e6e047e05ca6e815d2eeabe7',
+        'HOST': 'ec2-54-235-90-200.compute-1.amazonaws.com',
         'PORT': '5432',
 
     }
